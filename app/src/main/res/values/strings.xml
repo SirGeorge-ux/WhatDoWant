@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">WhatDoWant</string>
+    <string name="tab_text_1">My list</string>
+    <string name="tab_text_2">lists</string>
+    <string name="tab_text_3">Contacts</string>
+    <string name="title_activity_intrucciones">IntruccionesActivity</string>
+</resources>
