@@ -1,6 +1,5 @@
 package com.example.whatdowant;
 
-import android.net.Uri;
 import android.os.Bundle;
 import android.text.Html;
 import android.widget.LinearLayout;
@@ -20,7 +19,6 @@ public class IntruccionesActivity extends AppCompatActivity implements MyList.On
     private LinearLayout linearPuntos;
     private TextView[] puntosSlide;
     private Html Htlm;
-    //private ActivityIntruccionesBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +28,10 @@ public class IntruccionesActivity extends AppCompatActivity implements MyList.On
         viewPager = findViewById(R.id.view_pager);
         viewPager.setAdapter(sectionsPagerAdapter);
 
+        linearPuntos = findViewById(R.id.idLinearPuntos);
+        agregarIndicadorPuntos(pos:0);
+        viewPager.addOnPageChangeListener(viewListener);
+    }
         /*
         binding = ActivityIntruccionesBinding.inflate(getLayoutInflater());
 
@@ -43,11 +45,8 @@ public class IntruccionesActivity extends AppCompatActivity implements MyList.On
         FloatingActionButton fab = binding.fab;
         */
 
-        linearPuntos = findViewById(R.id.idLinearPuntos);
-        agregarIndicadorPuntos(0);
-        viewPager.addOnPageChangeListener(viewListener);
 
-        private void agregarIndicadorPuntos(int pos) {
+    private void agregarIndicadorPuntos(int pos) {
             puntosSlide = new TextView[3];
             linearPuntos.removeAllViews();
 
@@ -63,7 +62,7 @@ public class IntruccionesActivity extends AppCompatActivity implements MyList.On
             }
         }
 
-        ViewPager.OnPageChangeListener viewListener = new ViewPager.OnPageChangeListener() {
+        ViewPager.OnPageChangeListener viewListener=new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int i, float v, int i1) {
 
@@ -79,7 +78,6 @@ public class IntruccionesActivity extends AppCompatActivity implements MyList.On
 
             }
         };
-    }
 
     private void agregartIndicadorPuntos(int pos) {
     }
@@ -87,7 +85,4 @@ public class IntruccionesActivity extends AppCompatActivity implements MyList.On
     private void agregarIndicadorPuntos(int i) {
     }
 
-    @Override
-    public void onFragmentInteraction(Uri uri) {
-    }
 }

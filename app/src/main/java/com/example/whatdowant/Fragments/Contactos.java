@@ -20,15 +20,15 @@ import androidx.fragment.app.Fragment;
         public static com.example.whatdowant.Fragments.MyList newInstance(String param1, String param2) {
             com.example.whatdowant.Fragments.MyList fragment = new com.example.whatdowant.Fragments.MyList();
             Bundle args = new Bundle();
-            args.putString(ARG_PARAM1, parami1);
-            args.putString(ARG_PARAM2, parami2);
+            args.putString(ARG_PARAM1, param1);
+            args.putString(ARG_PARAM2, param2);
             fragment.setArguments(args);
             return fragment;
 
         }
         @Override
         public void onCreate(Bundle savedInstanceState) {
-            super.OnCreate(savedInstanceState);
+            super.onCreate(savedInstanceState);
             if (getArguments() != null) {
                 mParam1 = getArguments().getString(ARG_PARAM1);
                 mParam2 = getArguments().getString(ARG_PARAM2);

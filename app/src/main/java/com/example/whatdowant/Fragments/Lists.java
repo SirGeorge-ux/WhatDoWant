@@ -17,8 +17,8 @@ public class Lists extends Fragment {
         public static MyList newInstance(String param1, String param2) {
             MyList fragment = new MyList();
             Bundle args = new Bundle();
-            args.putString(ARG_PARAM1, parami1);
-            args.putString(ARG_PARAM2, parami2);
+            args.putString(ARG_PARAM1, param1);
+            args.putString(ARG_PARAM2, param2);
             fragment.setArguments(args);
             return fragment;
 

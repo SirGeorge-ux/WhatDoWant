@@ -19,28 +19,15 @@ import com.example.whatdowant.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ActivityMainBinding binding;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
-
-        SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());
-        ViewPager viewPager = binding.viewPager;
-        viewPager.setAdapter(sectionsPagerAdapter);
-        TabLayout tabs = binding.tabs;
-        tabs.setupWithViewPager(viewPager);
-        FloatingActionButton fab = binding.fab;
-
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent miIntent = new Intent(MainActivity.this, IntruccionesActivity.class);
-                startActivity(miIntent);
-            }
-        });
+        setContentView(R.layout.activity_main);
     }
+    public void onClick(View view) {
+        Intent miIntent=new Intent(MainActivity.this, IntruccionesActivity.class);
+        startActivity(miIntent);
+    }
+
+
 }
